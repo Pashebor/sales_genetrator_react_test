@@ -1,0 +1,159 @@
+.icon {
+  width: 75px;
+  height: 75px;
+  border: 5px solid white;
+  border-radius: 50%;
+  margin: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out; }
+  .icon--seo {
+    background-color: #b0221e;
+    box-shadow: 0 0 0 1px #b0221e; }
+    .icon--seo:hover {
+      box-shadow: 0 0 2px 4px #b0221e; }
+  .icon--content {
+    background-color: #6e5a75;
+    box-shadow: 0 0 0 1px #6e5a75; }
+    .icon--content:hover {
+      box-shadow: 0 0 2px 4px #6e5a75; }
+  .icon--design {
+    background-color: #116951;
+    box-shadow: 0 0 0 1px #116951; }
+    .icon--design:hover {
+      box-shadow: 0 0 2px 4px #116951; }
+  .icon--analyze {
+    background-color: #ee8a12;
+    box-shadow: 0 0 0 1px #ee8a12; }
+    .icon--analyze:hover {
+      box-shadow: 0 0 2px 4px #ee8a12; }
+  .icon--email {
+    background-color: #1e68a7;
+    box-shadow: 0 0 0 1px #1e68a7; }
+    .icon--email:hover {
+      box-shadow: 0 0 2px 4px #1e68a7; }
+  .icon--consulting {
+    background-color: #85ac41;
+    box-shadow: 0 0 0 1px #85ac41; }
+    .icon--consulting:hover {
+      box-shadow: 0 0 2px 4px #85ac41; }
+  .icon img {
+    display: block;
+    width: 50px;
+    margin: 0 auto;
+    position: relative;
+    top: 12px; }
+
+.trophy, .trophy-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%; }
+
+.trophy-header--meet {
+  font-family: Arial;
+  font-size: 35px;
+  font-weight: 400;
+  color: #565853;
+  text-align: left;
+  width: 100%; }
+
+.trophy-header--about {
+  font-family: Arial;
+  text-align: center;
+  width: 50%;
+  font-size: 25px;
+  color: white;
+  font-weight: 400;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 10px 20px;
+  background-color: #1e68a7; }
+
+.trophy-header--wwdo {
+  font-family: Arial;
+  text-align: left;
+  width: auto;
+  font-weight: 400;
+  font-size: 25px;
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 10px 20px;
+  background-color: #1e68a7; }
+
+.trophy__icons, .trophy__icons--top, .trophy__icons--top .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: Arial;
+  color: #565853;
+  font-weight: 100; }
+  .trophy__icons--top {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%; }
+    .trophy__icons--top .item {
+      font-size: 25px; }
+      .trophy__icons--top .item__text {
+        width: 200px; }
+      .trophy__icons--top .item--left {
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        text-align: right;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center; }
+      .trophy__icons--top .item--right {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        text-align: left;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center; }
+
+.bolder {
+  font-weight: bolder; }
+
+.plus {
+  font-family: Arial;
+  font-weight: 100;
+  background-color: #1e68a7;
+  font-size: 20px;
+  color: white;
+  width: 20px;
+  height: 20px;
+  margin: 0 30px 0 30px;
+  line-height: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .plus:hover {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }

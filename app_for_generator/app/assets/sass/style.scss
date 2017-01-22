@@ -1,0 +1,104 @@
+@import "icons";
+$main-font: Arial;
+$trophy-main-font-color: #565853;
+$trophy-secondary-color: white;
+$plus-bg-color: #1e68a7;
+.trophy{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.trophy-header{
+  @extend .trophy;
+  &--meet{
+    font-family: $main-font;
+    font-size: 35px;
+    font-weight: 400;
+    color: $trophy-main-font-color;
+    text-align: left;
+    width: 100%;
+  }
+  &--about{
+    font-family: $main-font;
+    text-align: center;
+    width: 50%;
+    font-size: 25px;
+    color: white;
+    font-weight: 400;
+    align-self: center;
+    padding: 10px 20px;
+    background-color: $plus-bg-color;
+  }
+  &--wwdo{
+    font-family: $main-font;
+    text-align: left;
+    width: auto;
+    font-weight: 400;
+    font-size: 25px;
+    color: white;
+    align-self: center;
+    padding: 10px 20px;
+    background-color: $plus-bg-color;
+  }
+}
+
+
+.trophy__icons{
+  display: flex;
+  flex-direction: row;
+  font-family: $main-font;
+  color: $trophy-main-font-color;
+  font-weight: 100;
+  &--top{
+    @extend .trophy__icons;
+    justify-content: space-around;
+    width: 100% ;
+    .item{
+      @extend .trophy__icons;
+      font-size: 25px;
+      &__text{
+        width: 200px;
+      }
+      &--left{
+        justify-content: flex-end;
+        text-align: right;
+        align-self: center;
+      }
+      &--right{
+        justify-content: flex-start;
+        text-align: left;
+        align-self: center;
+      }
+
+    }
+    }
+  }
+
+.bolder{
+  font-weight: bolder;
+}
+
+.plus{
+  font-family: $main-font;
+  font-weight: 100;
+  background-color: $plus-bg-color;
+  font-size: 20px;
+  color: $trophy-secondary-color;
+  width: 20px;
+  height: 20px;
+  margin: 0 30px 0 30px;
+  line-height: 20px;
+  align-self: center;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover{
+    transform: rotate(45deg);
+  }
+}
+
+

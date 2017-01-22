@@ -1,0 +1,65 @@
+.icon{
+  width: 75px;
+  height: 75px;
+  border: 5px solid white;
+  border-radius: 50%;
+  margin: 0;
+  align-self: center;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  &--seo{
+    background-color: #b0221e;
+    box-shadow: 0 0 0 1px #b0221e;
+    &:hover{
+      box-shadow: 0 0 2px 4px #b0221e;
+    }
+  }
+
+  &--content{
+    background-color: #6e5a75;
+    box-shadow: 0 0 0 1px #6e5a75;
+    &:hover{
+      box-shadow: 0 0 2px 4px #6e5a75;
+    }
+  }
+
+  &--design{
+    background-color: #116951;
+    box-shadow: 0 0 0 1px #116951;
+    &:hover{
+      box-shadow: 0 0 2px 4px #116951;
+    }
+  }
+
+  &--analyze{
+    background-color: #ee8a12;
+    box-shadow: 0 0 0 1px #ee8a12;
+    &:hover{
+      box-shadow: 0 0 2px 4px #ee8a12;
+    }
+  }
+
+  &--email{
+    background-color: #1e68a7;
+    box-shadow: 0 0 0 1px #1e68a7;
+    &:hover{
+      box-shadow: 0 0 2px 4px #1e68a7;
+    }
+  }
+
+  &--consulting{
+    background-color: #85ac41;
+    box-shadow: 0 0 0 1px #85ac41;
+    &:hover{
+      box-shadow: 0 0 2px 4px #85ac41;
+    }
+  }
+  img{
+    display: block;
+    width: 50px;
+    margin: 0 auto;
+    position: relative;
+    top: 12px;
+  }
+}
+
