@@ -8,7 +8,8 @@ $plus-bg-color: #1e68a7;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 85%;
+  margin: auto;
 }
 
 .trophy-header{
@@ -96,9 +97,13 @@ $plus-bg-color: #1e68a7;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  &:hover{
+  &--active{
     transform: rotate(45deg);
   }
+}
+
+@media screen and (max-width: 1024px) {
+  .trophy{width: 100%;}
 }
 
 

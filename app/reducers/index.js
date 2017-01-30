@@ -5,7 +5,7 @@ import { combineReducers } from 'redux';
 import trophyReducer from './trophy.reducer.js';
 
 var reducers = combineReducers({
-    trophyReducer: trophyReducer
+    trophyState: trophyReducer
 });
 
 export default reducers;
