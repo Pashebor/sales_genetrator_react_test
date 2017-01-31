@@ -28911,9 +28911,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _redux = __webpack_require__(177);
-
 	var _reactRedux = __webpack_require__(262);
+
+	var _redux = __webpack_require__(177);
 
 	var _index = __webpack_require__(272);
 
@@ -28937,34 +28937,34 @@
 	    _createClass(TrophyIconsTop, [{
 	        key: 'firstTrophyElementHandler',
 	        value: function firstTrophyElementHandler() {
-	            var _this2 = this;
-
 	            this.props.trophyFirstBtnClicked(true);
-	            this.refs.seo.style = 'animation: seoAnimation 0.6s 1 linear;';
-	            /*  this.refs.seoImg.style = 'display: none';*/
-	            setTimeout(function () {
-	                _this2.refs.seo.style = 'visibility: hidden';
-	            }, 500);
+	            this.refs.seo.style = 'animation: seoAnimation 0.6s 1 linear forwards;';
+	        }
+	    }, {
+	        key: 'plusBtnOneHandler',
+	        value: function plusBtnOneHandler() {
+	            this.props.trophyFirstBtnClicked(false);
+	            this.refs.seo.style = '';
 	        }
 	    }, {
 	        key: 'secondTrophyElementHandler',
 	        value: function secondTrophyElementHandler() {
-	            var _this3 = this;
-
 	            this.props.trophySecondBtnClicked(true);
-	            this.refs.content.style = 'animation: contentAnimation 0.6s 1 linear;';
-	            /*this.refs.contentImg.style = 'display: none';*/
-	            setTimeout(function () {
-	                _this3.refs.content.style = 'visibility: hidden';
-	            }, 500);
+	            this.refs.content.style = 'animation: contentAnimation 0.6s 1 linear forwards;';
+	        }
+	    }, {
+	        key: 'plusBtnTwoHandler',
+	        value: function plusBtnTwoHandler() {
+	            this.props.trophySecondBtnClicked(false);
+	            this.refs.content.style = '';
 	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            var _this4 = this;
+	            var _this2 = this;
 
 	            var firstBtnClicked = function firstBtnClicked() {
-	                if (_this4.props.trophy.first === true) {
+	                if (_this2.props.trophy.first === true) {
 	                    return 'plus plus--active';
 	                } else {
 	                    return 'plus';
@@ -28972,7 +28972,7 @@
 	            };
 
 	            var secondBtnClicked = function secondBtnClicked() {
-	                if (_this4.props.trophy.second === true) {
+	                if (_this2.props.trophy.second === true) {
 	                    return 'plus plus--active';
 	                } else {
 	                    return 'plus';
@@ -28992,7 +28992,7 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: firstBtnClicked() },
+	                        { className: firstBtnClicked(), onClick: this.plusBtnOneHandler.bind(this) },
 	                        '+'
 	                    ),
 	                    _react2.default.createElement(
@@ -29011,7 +29011,7 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: secondBtnClicked() },
+	                        { className: secondBtnClicked(), onClick: this.plusBtnTwoHandler.bind(this) },
 	                        '+'
 	                    ),
 	                    _react2.default.createElement(
@@ -29153,36 +29153,36 @@
 	    _createClass(TrophyIconsMiddle, [{
 	        key: 'thirdTrophyElementHandler',
 	        value: function thirdTrophyElementHandler() {
-	            var _this2 = this;
-
 	            this.props.trophyThirdBtnClicked(true);
-	            this.refs.design.style = 'animation: designAnimation 0.8s 1 linear;';
-	            /*this.refs.designImg.style = 'display: none';*/
-	            setTimeout(function () {
-	                _this2.refs.design.style = 'visibility: hidden';
-	            }, 750);
+	            this.refs.design.style = 'animation: designAnimation 0.8s 1 linear forwards;';
+	        }
+	    }, {
+	        key: 'plusBtnThreeHandler',
+	        value: function plusBtnThreeHandler() {
+	            this.props.trophyThirdBtnClicked(false);
+	            this.refs.design.style = '';
 	        }
 	    }, {
 	        key: 'fourthTrophyElementHandler',
 	        value: function fourthTrophyElementHandler() {
-	            var _this3 = this;
-
 	            this.props.trophyFourthBtnClicked(true);
-	            this.refs.analyse.style = 'animation: analyseAnimation 0.8s 1 linear;';
-	            /*this.refs.analyseImg.style = 'display: none';*/
-	            setTimeout(function () {
-	                _this3.refs.analyse.style = 'visibility: hidden';
-	            }, 750);
+	            this.refs.analyse.style = 'animation: analyseAnimation 0.8s 1 linear forwards;';
+	        }
+	    }, {
+	        key: 'plusBtnFourHandler',
+	        value: function plusBtnFourHandler() {
+	            this.props.trophyFourthBtnClicked(true);
+	            this.refs.analyse.style = '';
 	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            var _this4 = this;
+	            var _this2 = this;
 
 	            var arr = [];
 
 	            var thirdBtnClicked = function thirdBtnClicked() {
-	                if (_this4.props.trophy.third === true) {
+	                if (_this2.props.trophy.third === true) {
 	                    return 'plus plus--active';
 	                } else {
 	                    return 'plus';
@@ -29190,7 +29190,7 @@
 	            };
 
 	            var fourthBtnClicked = function fourthBtnClicked() {
-	                if (_this4.props.trophy.fourth === true) {
+	                if (_this2.props.trophy.fourth === true) {
 	                    return 'plus plus--active';
 	                } else {
 	                    return 'plus';
@@ -29239,7 +29239,7 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: thirdBtnClicked() },
+	                        { className: thirdBtnClicked(), onClick: this.plusBtnThreeHandler.bind(this) },
 	                        '+'
 	                    ),
 	                    _react2.default.createElement(
@@ -29259,7 +29259,7 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: fourthBtnClicked() },
+	                        { className: fourthBtnClicked(), onClick: this.plusBtnFourHandler.bind(this) },
 	                        '+'
 	                    ),
 	                    _react2.default.createElement(
@@ -29343,6 +29343,24 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var _this2 = this;
+
+	            var fifthBtnClicked = function fifthBtnClicked() {
+	                if (_this2.props.trophy.fifth === true) {
+	                    return 'plus plus--active';
+	                } else {
+	                    return 'plus';
+	                }
+	            };
+
+	            var sixthBtnClicked = function sixthBtnClicked() {
+	                if (_this2.props.trophy.sixth === true) {
+	                    return 'plus plus--active';
+	                } else {
+	                    return 'plus';
+	                }
+	            };
+
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'trophy__icons--top' },
@@ -29356,12 +29374,12 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'plus' },
+	                        { className: fifthBtnClicked() },
 	                        '+'
 	                    ),
 	                    _react2.default.createElement(
 	                        'figure',
-	                        { onClick: this.fifthTrophyElementHandler.bind(this), className: 'icon icon--email' },
+	                        { onClick: this.fifthTrophyElementHandler.bind(this), className: 'icon icon--email', ref: 'email' },
 	                        _react2.default.createElement('img', { src: 'images/seo.png', alt: 'SEO', title: 'SEO' })
 	                    )
 	                ),
@@ -29370,12 +29388,12 @@
 	                    { className: 'item item--right' },
 	                    _react2.default.createElement(
 	                        'figure',
-	                        { onClick: this.sixthTrophyElementHandler.bind(this), className: 'icon icon--consulting' },
+	                        { onClick: this.sixthTrophyElementHandler.bind(this), className: 'icon icon--consulting', ref: 'consulting' },
 	                        _react2.default.createElement('img', { src: 'images/seo.png', alt: 'SEO', title: 'SEO' })
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'plus' },
+	                        { className: sixthBtnClicked() },
 	                        '+'
 	                    ),
 	                    _react2.default.createElement(

@@ -97,6 +97,9 @@ $plus-bg-color: #1e68a7;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  &:hover{
+    box-shadow: 0 0 1px 1px $plus-bg-color;
+  }
   &--active{
     transform: rotate(45deg);
   }

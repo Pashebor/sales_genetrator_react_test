@@ -14,20 +14,22 @@ class TrophyIconsMiddle extends Component {
 
     thirdTrophyElementHandler () {
         this.props.trophyThirdBtnClicked(true);
-        this.refs.design.style =  'animation: designAnimation 0.8s 1 linear;';
-        /*this.refs.designImg.style = 'display: none';*/
-        setTimeout(() => {
-            this.refs.design.style = 'visibility: hidden';
-        }, 750);
+        this.refs.design.style =  'animation: designAnimation 0.8s 1 linear forwards;';
+    }
+
+    plusBtnThreeHandler() {
+        this.props.trophyThirdBtnClicked(false);
+        this.refs.design.style = '';
     }
 
     fourthTrophyElementHandler () {
         this.props.trophyFourthBtnClicked(true);
-        this.refs.analyse.style =  'animation: analyseAnimation 0.8s 1 linear;';
-        /*this.refs.analyseImg.style = 'display: none';*/
-        setTimeout(() => {
-            this.refs.analyse.style = 'visibility: hidden';
-        }, 750);
+        this.refs.analyse.style =  'animation: analyseAnimation 0.8s 1 linear forwards;';
+    }
+
+    plusBtnFourHandler() {
+        this.props.trophyFourthBtnClicked(true);
+        this.refs.analyse.style = '';
     }
 
 
@@ -80,7 +82,7 @@ class TrophyIconsMiddle extends Component {
        <div className="trophy__icons--top">
            <div className="item item--left">
                <p className="item__text">Веб-дизайн</p>
-               <div className={thirdBtnClicked()}>+</div>
+               <div className={thirdBtnClicked()} onClick={this.plusBtnThreeHandler.bind(this)}>+</div>
                <figure onClick={this.thirdTrophyElementHandler.bind(this)} className="icon icon--design" ref="design">
                    <img  src="images/seo.png" alt="SEO" title="SEO" ref="designImg"/>
                </figure>
@@ -90,7 +92,7 @@ class TrophyIconsMiddle extends Component {
                <figure onClick={this.fourthTrophyElementHandler.bind(this)} className="icon icon--analyze" ref="analyse">
                    <img  src="images/seo.png" alt="SEO" title="SEO" ref="analyseImg"/>
                </figure>
-               <div className={fourthBtnClicked()}>+</div>
+               <div className={fourthBtnClicked()} onClick={this.plusBtnFourHandler.bind(this)}>+</div>
                <p className="item__text">Маркетинговый анализ</p>
            </div>
        </div>
