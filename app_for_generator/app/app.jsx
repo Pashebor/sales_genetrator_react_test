@@ -1,23 +1,17 @@
 'use strict';
 
 import {render} from 'react-dom';
-import React, {Component} from 'react';
-import Header from './components/Header.jsx';
-import TrophyIconsTop from  './components/TrophyIconsTop.jsx';
-import TrophyIconsMiddle from './components/TrophyIconsMiddle.jsx';
-import TrophyIconsBottom from './components/TrophyIconsBottom.jsx';
+import { createStore, applyMiddleware } from 'redux';
+import React from 'react';
+import { Router, Route,  browserHistory, Link } from 'react-router';
+import { Provider } from 'react-redux';
+import TrophyApp from './components/TrophyApp.jsx';
+import middleWare from 'redux-thunk';
+import reducers from './reducers';
 
-class Trophy extends Component{
-    render() {
-        return(
-            <section className="trophy">
-                <Header/>
-                <TrophyIconsTop/>
-                <TrophyIconsMiddle/>
-                <TrophyIconsBottom/>
-            </section>
-        )
-    }
-}
 
-render(<Trophy/>, document.getElementById('trophy-app'));
+const store = createStore(reducers, {}, applyMiddleware(middleWare));
+
+render(<Provider store={store}>
+           <TrophyApp/>
+</Provider>, document.getElementById('trophy-app'));
