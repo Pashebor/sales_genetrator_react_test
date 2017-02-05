@@ -2,8 +2,6 @@
 
 import {render} from 'react-dom';
 import React, {Component} from 'react';
-import { createStore, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {trophyThirdBtnClicked, trophyFourthBtnClicked, getAllClickedValues} from  '../actions/index.js';
@@ -28,12 +26,13 @@ class TrophyIconsMiddle extends Component {
     }
 
     plusBtnFourHandler() {
-        this.props.trophyFourthBtnClicked(true);
+        this.props.trophyFourthBtnClicked(false);
         this.refs.analyse.style = '';
     }
 
 
    render() {
+
        let arr = [];
 
        let thirdBtnClicked = () => {
@@ -52,21 +51,22 @@ class TrophyIconsMiddle extends Component {
            }
        };
 
-       let trophy = () => {
+       let trophy = (that) => {
+
            if (arr.length != 6 ) {
-               return (
+               return(
                    <div className="item">
-                       <svg className="svg-container" role="img">
-                           <use className="svg-image" xlinkHref='images/trophy.svg#trophy'/>
-                       </svg>
-                   </div>
-               )
+                       <figure role="img">
+                           <img className="svg-image" src='./images/trophy.svg#trophy' ref="trophy" />
+                       </figure>
+                   </div>)
            } else {
                return(
                    <div className="item">
-                       <svg role="img" className="trophy">
-                           <use xlinkHref='images/trophy.svg#trophy'/>
-                       </svg>
+                       <figure role="img" >
+                           <img className="svg-image svg-image--animated" src='./images/trophy.svg#trophy' ref="trophy"/>
+                       </figure>
+                       <button className="bigEntrance">some-button</button>
                    </div>
                )
            }
@@ -83,13 +83,13 @@ class TrophyIconsMiddle extends Component {
            <div className="item item--left">
                <p className="item__text">Веб-дизайн</p>
                <div className={thirdBtnClicked()} onClick={this.plusBtnThreeHandler.bind(this)}>+</div>
-               <figure onClick={this.thirdTrophyElementHandler.bind(this)} className="icon icon--design" ref="design">
+               <figure onClick={this.thirdTrophyElementHandler.bind(this)} className="icon_trophy icon_trophy--design" ref="design">
                    <img  src="images/seo.png" alt="SEO" title="SEO" ref="designImg"/>
                </figure>
            </div>
-           {trophy()}
+           {trophy(this)}
            <div className="item item--right">
-               <figure onClick={this.fourthTrophyElementHandler.bind(this)} className="icon icon--analyze" ref="analyse">
+               <figure onClick={this.fourthTrophyElementHandler.bind(this)} className="icon_trophy icon_trophy--analyze" ref="analyse">
                    <img  src="images/seo.png" alt="SEO" title="SEO" ref="analyseImg"/>
                </figure>
                <div className={fourthBtnClicked()} onClick={this.plusBtnFourHandler.bind(this)}>+</div>

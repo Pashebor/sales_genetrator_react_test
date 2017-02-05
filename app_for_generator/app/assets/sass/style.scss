@@ -1,5 +1,5 @@
 @import "icons";
-$main-font: Arial;
+$main-font: "Arimo";
 $trophy-main-font-color: #565853;
 $trophy-secondary-color: white;
 $plus-bg-color: #1e68a7;
@@ -12,20 +12,32 @@ $plus-bg-color: #1e68a7;
   margin: auto;
 }
 
+.trophy section{
+  padding: 0;
+  margin: 0;
+}
+
+.trophy-header h2::after{
+  margin: 0;
+  background: none;
+}
+
 .trophy-header{
   @extend .trophy;
+  margin: 0 auto 30px auto !important;
   &--meet{
     font-family: $main-font;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 400;
     color: $trophy-main-font-color;
-    text-align: left;
+    text-align: center;
     width: 100%;
+    margin: 0;
   }
   &--about{
     font-family: $main-font;
     text-align: center;
-    width: 50%;
+    width: 70%;
     font-size: 25px;
     color: white;
     font-weight: 400;
@@ -59,10 +71,12 @@ $plus-bg-color: #1e68a7;
     width: 100% ;
     .item{
       @extend .trophy__icons;
-      font-size: 25px;
+      font-size: 20px;
       &__text{
         width: 200px;
+        margin: 42px 0 0 0;
       }
+
       &--left{
         justify-content: flex-end;
         text-align: right;
@@ -78,8 +92,8 @@ $plus-bg-color: #1e68a7;
     }
   }
 
-.bolder{
-  font-weight: bolder;
+.trophy .trophy-header .bolder{
+  font-weight: 900;
 }
 
 .plus{
@@ -107,6 +121,11 @@ $plus-bg-color: #1e68a7;
 
 @media screen and (max-width: 1024px) {
   .trophy{width: 100%;}
+  .trophy__icons--top .item__text{
+    font-size: 15px;
+    width: 100px;
+    margin: 20px 0 0 0;
+  }
 }
 
 

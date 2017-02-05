@@ -7,8 +7,8 @@ var root = path.resolve(__dirname, 'app');
 
 module.exports = {
     entry: {
-        bundle: path.resolve(root, 'app.jsx'),
-        style: path.resolve(root, 'assets/sass/style.scss'),
+        trophy_js: path.resolve(root, 'app.jsx'),
+        trophy_style: path.resolve(root, 'assets/sass/style.scss'),
         trophy: path.resolve(root, 'assets/img/trophy.svg'),
         seo: path.resolve(root, 'assets/img/seo.png')
         /*flower: path.resolve(root, 'assets/img/flowers.png'),

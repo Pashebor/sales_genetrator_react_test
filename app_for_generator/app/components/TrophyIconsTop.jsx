@@ -50,16 +50,16 @@ class TrophyIconsTop extends Component{
                 <div className="item item--left">
                     <p className="item__text">Интернет-продвижение</p>
                     <div className={firstBtnClicked()} onClick={this.plusBtnOneHandler.bind(this)}>+</div>
-                    <figure onClick={this.firstTrophyElementHandler.bind(this)} className="icon icon--seo" ref="seo">
+                    <figure onClick={this.firstTrophyElementHandler.bind(this)} className="icon_trophy icon_trophy--seo" ref="seo">
                         <img  src="images/seo.png" alt="SEO" title="SEO" ref="seoImg"/>
                     </figure>
                 </div>
                 <div className="item item--right">
-                    <figure onClick={this.secondTrophyElementHandler.bind(this)} className="icon icon--content" ref="content">
+                    <figure onClick={this.secondTrophyElementHandler.bind(this)} className="icon_trophy icon_trophy--content" ref="content">
                         <img  src="images/seo.png" alt="SEO" title="SEO" ref="contentImg"/>
                     </figure>
                     <div className={secondBtnClicked()} onClick={this.plusBtnTwoHandler.bind(this)}>+</div>
-                    <p className="item__text">Интернет-продвижение</p>
+                    <p className="item__text">Создание контента</p>
                 </div>
             </div>
         )
